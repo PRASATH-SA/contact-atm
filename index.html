@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Achariya Tech Meet 25</title>
+  <link rel="shortcut icon" href="res/achariya25.jpg" type="image/x-icon">
+  <!-- JQuery & Tailwind CSS -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="style.css">
+  <meta name="google-site-verification" content="ihABI4ddWtMjowGMQHWwomxidrEhnATpUEkYdyUDKQg" />
+  <meta name="description" content="Achariya Tech Meet - 2k25, A National level Technical Symposium by Achariya College of Engineering Technology. Website Sponsored by Favoflex.">
+  <meta name="og:image" content="https://atm25.favoflex.com/res/atmLogo.png" />
+  <meta name="theme-color" content="#000022" />
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#000022">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000022">
+  
+</head>
+<body class="bg-[#0f0c29] text-white font-sans atm_cursor">
+  <script>
+    // jQuery for Dropdown Toggle
+    $(document).ready(function () {
+      $('#dropdownButton').on('click', function (e) {
+        e.preventDefault();
+        $('#dropdownMenu').toggleClass('hidden');
+      });
+
+      // Close dropdown when clicking outside
+      $(document).on('click', function (e) {
+        if (!$(e.target).closest('#dropdownButton, #dropdownMenu').length) {
+          $('#dropdownMenu').addClass('hidden');
+        }
+      });
+    });
+  </script>
+   <style>
+        /* Parallax background */
+    .parallax {
+    background-image: url('https://images.unsplash.com/photo-1511447333015-45b65e60f6d5?q=80&w=1555&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Replace with your background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* This creates the parallax effect */
+    width: 100%;
+    height: 100%;
+    filter: brightness(0.4); /* Optional: darken the background for better text contrast */
+    z-index: -10;
+    }
+    body{
+      scroll-behavior: smooth;
+    }
+    .text-neon {
+      color: #0ff;
+      /* -webkit-text-stroke: .3px rgb(41, 39, 39); */
+      text-shadow: 0 0 5px #0ff, 0 0 5px #0ff, 0 0 5px #0ff;
+    }
+   
+    body{
+      cursor: url('https://atm25.netlify.app/res/atmLogoo.jpg'),auto;
+    }
+    /* Splash screen fade-out */
+    #splash-screen {
+      animation: fadeOut 1s ease forwards;
+      animation-delay: 3s; /* stays visible for 3s */
+    }
+
+    /* Logo entrance effect */
+    #splash-screen .logo {
+      opacity: 0;
+      transform: scale(0.5);
+      animation: logoPop 1.2s ease forwards;
+    }
+
+    #splash-screen h1 {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: textFade 1.2s ease forwards;
+      animation-delay: 0.8s;
+    }
+
+    /* Animations */
+    @keyframes logoPop {
+      0% { opacity: 0; transform: scale(0.5) rotate(-15deg); }
+      60% { opacity: 1; transform: scale(1.1) rotate(5deg); }
+      100% { opacity: 1; transform: scale(1) rotate(0); }
+    }
+
+    @keyframes textFade {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeOut {
+      to { opacity: 0; visibility: hidden; }
+    }
+    </style>
+    <!-- Splash Screen -->
+<div id="splash-screen" class="fixed inset-0 flex items-center justify-center bg-gradient-to-br from-purple-950 via-black to-gray-900 z-[9999]">
+  <div class="logo-container text-center">
+    <img src="atm.jpg" alt="ATM2K25 Logo" class="logo w-48 mx-auto">
+    <h1 class="mt-4 text-3xl font-extrabold ">website Sponsored by <a href="https://www.favoflex.com">FAVOFLEX</a></h1>
+  </div>
+</div>
+
+  <div class="parallax absolute inset-0 -z-10">
+    <video src="rotate_bg.webm" autoplay loop muted style="max-width: none; width: 100%;height: 100vh; object-fit: cover;"></video>
+  </div> 
+  <div class="container">
+    <div class="cta">
+        <h2>THANKS FOR VISITING</h2>
+        <p>The event has been completed successfully on 10.10.2025!</p>
+        <p>This site designed & developed by <a href="https://www.favoflex.com">Favoflex</a></p>
+    </div>
+  </div>
+
+</body>
+</html>
